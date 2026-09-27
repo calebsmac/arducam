@@ -271,7 +271,7 @@ namespace Nos3
 
     size_t I2CSlaveConnection::i2c_read(uint8_t *rbuf, size_t rlen)
     {
-        size_t num_read;
+        size_t num_read = 0;
         sim_logger->debug("i2c_read: 0x%02x", _i2c_out_data); // log data
         if(rlen <= 1)
         {
